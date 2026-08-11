@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,11 @@ public class TabSwitcher : MonoBehaviour
     /// </summary>
     public bool initTabPages;
 
+    /// <summary>
+    /// 在按钮完成页面切换后通知外部业务控制器。
+    /// </summary>
+    public event Action<int> TabButtonClicked;
+
 
 
     private void Start()
@@ -28,7 +34,11 @@ public class TabSwitcher : MonoBehaviour
         for (int i = 0; i < tabButtons.Length; i++)
         {
             int index = i; // 缓存索引
-            tabButtons[i].onClick.AddListener(() => SwitchTab(index));
+            tabButtons[i].onClick.AddListener(() =>
+            {
+                SwitchTab(index);
+                TabButtonClicked?.Invoke(index);
+            });
         }
         if (initTabPages)
         {

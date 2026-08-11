@@ -83,6 +83,76 @@ public class SGraphicsSettings : BaseSettings
 }
 
 /// <summary>
+/// 显微镜摄像头设置。
+/// </summary>
+public class CameraSettings : BaseSettings
+{
+    public CameraSettings(IniConfig config) : base(config, "Camera")
+    {
+    }
+
+    public string DeviceName
+    {
+        get => ReadValue("DeviceName", "");
+        set => WriteValue("DeviceName", value ?? "");
+    }
+
+    public (int width, int height) Resolution
+    {
+        get
+        {
+            string resolution = ReadValue("Resolution", "1920*1080");
+            string[] parts = resolution.Split('*', 'x', 'X', ',');
+            if (parts.Length == 2
+                && int.TryParse(parts[0].Trim(), out int width)
+                && int.TryParse(parts[1].Trim(), out int height)
+                && width > 0 && height > 0)
+            {
+                return (width, height);
+            }
+
+            return (1920, 1080);
+        }
+        set => WriteValue("Resolution", $"{value.width}*{value.height}");
+    }
+
+    public int FPS
+    {
+        get => Mathf.Max(1, ReadInt("FPS", 30));
+        set => WriteValue("FPS", Mathf.Max(1, value).ToString());
+    }
+
+    public int Rotation
+    {
+        get
+        {
+            int value = ReadInt("Rotation", 0);
+            value = ((value % 360) + 360) % 360;
+            return value == 90 || value == 180 || value == 270 ? value : 0;
+        }
+        set => WriteValue("Rotation", value.ToString());
+    }
+
+    public bool MirrorX
+    {
+        get => ReadBool("MirrorX", false);
+        set => WriteValue("MirrorX", value.ToString());
+    }
+
+    public bool MirrorY
+    {
+        get => ReadBool("MirrorY", false);
+        set => WriteValue("MirrorY", value.ToString());
+    }
+
+    public float ReconnectInterval
+    {
+        get => Mathf.Max(0.1f, ReadFloat("ReconnectInterval", 1f));
+        set => WriteValue("ReconnectInterval", Mathf.Max(0.1f, value).ToString());
+    }
+}
+
+/// <summary>
 /// 游戏设置
 /// </summary>
 public class GameSettings : BaseSettings
@@ -101,7 +171,7 @@ public class GameSettings : BaseSettings
 
     public string LoopMode
     {
-        get => ReadValue("LoopMode", "all");
+        get => ReadValue("LoopMode", "one");
         set => WriteValue("LoopMode", value.ToString());
     }
 

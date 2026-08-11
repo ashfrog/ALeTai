@@ -88,6 +88,12 @@ public class LitVCR : MonoBehaviour
     public int videoindex = 0;
 
     /// <summary>
+    /// 播放列表和当前视频变化通知，供本地 UI 和远程控制同步标题。
+    /// </summary>
+    public event Action PlaylistChanged;
+    public event Action<int> VideoChanged;
+
+    /// <summary>
     /// 文件夹内视频播完一次后调用
     /// </summary>
     public Action OncePlayFolder;
@@ -216,21 +222,20 @@ public class LitVCR : MonoBehaviour
 
     public void PlayPrevious()
     {
-        SkipPrevScreenSaver();
-        videoindex = --videoindex % videoPaths.Count;
-        if (videoindex < 0)
+        if (videoPaths == null || videoPaths.Count == 0)
         {
-            videoindex += videoPaths.Count;
+            return;
         }
+
+        videoindex = GetAdjacentVideoIndex(-1);
         OpenVideoByIndex(videoindex, true);
     }
 
     public void PlayNext()
     {
-        if (enablePlayNext)
+        if (enablePlayNext && videoPaths != null && videoPaths.Count > 0)
         {
-            SkipNextScreenSaver();
-            videoindex = ++videoindex % videoPaths.Count;
+            videoindex = GetAdjacentVideoIndex(1);
             OpenVideoByIndex(videoindex, true);
         }
     }
@@ -244,22 +249,113 @@ public class LitVCR : MonoBehaviour
 
     private void SkipNextScreenSaver()
     {
-        int netxtindex = (videoindex + 1) % videoPaths.Count;
+        if (videoPaths == null || videoPaths.Count == 0)
+        {
+            return;
+        }
+
+        int netxtindex = NormalizeVideoIndex(videoindex + 1);
         string nextfilename = Path.GetFileName(videoPaths[netxtindex]);
         if (nextfilename.Equals(GetScreenSaver()))//下一个是屏保
         {
-            videoindex = (++videoindex) % videoPaths.Count;//跳过屏保
+            videoindex = netxtindex;//跳过屏保
         }
     }
 
     private void SkipPrevScreenSaver()
     {
-        int netxtindex = (videoindex - 1 + videoPaths.Count) % videoPaths.Count;
+        if (videoPaths == null || videoPaths.Count == 0)
+        {
+            return;
+        }
+
+        int netxtindex = NormalizeVideoIndex(videoindex - 1);
         string nextfilename = Path.GetFileName(videoPaths[netxtindex]);
         if (nextfilename.Equals(GetScreenSaver()))//下一个是屏保
         {
-            videoindex = (--videoindex) % videoPaths.Count;//跳过屏保
+            videoindex = netxtindex;//跳过屏保
         }
+    }
+
+    private int NormalizeVideoIndex(int index)
+    {
+        if (videoPaths == null || videoPaths.Count == 0)
+        {
+            return -1;
+        }
+
+        index %= videoPaths.Count;
+        if (index < 0)
+        {
+            index += videoPaths.Count;
+        }
+
+        return index;
+    }
+
+    /// <summary>
+    /// 获取按当前播放列表规则计算的上一个/下一个视频索引。
+    /// 屏保文件会被跳过，且索引循环。
+    /// </summary>
+    public int GetAdjacentVideoIndex(int direction)
+    {
+        if (videoPaths == null || videoPaths.Count == 0 || direction == 0)
+        {
+            return -1;
+        }
+
+        direction = direction < 0 ? -1 : 1;
+        int candidate = NormalizeVideoIndex(videoindex + direction);
+        int firstCandidate = candidate;
+
+        for (int i = 0; i < videoPaths.Count; i++)
+        {
+            if (!Path.GetFileName(videoPaths[candidate]).Equals(GetScreenSaver(), StringComparison.OrdinalIgnoreCase)
+                || candidate == videoindex)
+            {
+                return candidate;
+            }
+
+            candidate = NormalizeVideoIndex(candidate + direction);
+            if (candidate == firstCandidate)
+            {
+                break;
+            }
+        }
+
+        return firstCandidate;
+    }
+
+    /// <summary>
+    /// 返回不含扩展名的播放列表文件名。
+    /// </summary>
+    public string GetVideoName(int index)
+    {
+        if (videoPaths == null || index < 0 || index >= videoPaths.Count || string.IsNullOrEmpty(videoPaths[index]))
+        {
+            return "无视频";
+        }
+
+        string path = videoPaths[index].Trim();
+        try
+        {
+            if (IsWebUrl(path))
+            {
+                path = new Uri(path).AbsolutePath;
+            }
+        }
+        catch
+        {
+            // 对无法解析的 URL 继续按普通路径处理。
+        }
+
+        string name = Path.GetFileNameWithoutExtension(Uri.UnescapeDataString(path));
+        return string.IsNullOrEmpty(name) ? "无视频" : name;
+    }
+
+    public string GetAdjacentVideoName(int direction)
+    {
+        return GetVideoName(GetAdjacentVideoIndex(direction));
     }
 
     /// <summary>
@@ -442,7 +538,11 @@ public class LitVCR : MonoBehaviour
             {
                 string arrStr = File.ReadAllText(playlistFilePath);
                 var files = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(arrStr);
-                videoPaths = files.Select(s => IsWebUrl(s) ? s : Path.Combine(persistentDataPath, s)).ToList();
+                videoPaths = files == null
+                    ? new List<string>()
+                    : files.Where(s => !string.IsNullOrWhiteSpace(s))
+                        .Select(s => IsWebUrl(s) ? s : Path.Combine(persistentDataPath, s)).ToList();
+                PlaylistChanged?.Invoke();
                 return string.Join(", ", videoPaths); // 改为更适合输出的方式
             }
             catch (Exception ex)
@@ -452,6 +552,7 @@ public class LitVCR : MonoBehaviour
         }
 
         videoPaths = FileUtils.GetMediaFiles(persistentDataPath);
+        PlaylistChanged?.Invoke();
         return string.Join(", ", videoPaths); // 改为更适合输出的方式
     }
 
@@ -751,12 +852,19 @@ public class LitVCR : MonoBehaviour
     /// <param name="videoindex"></param>
     public void OpenVideoByIndex(int videoindex, bool reload = true, bool imgstopped = false)
     {
-        if (videoindex < 0 || videoindex > videoPaths.Count)
+        if (videoPaths == null || videoPaths.Count == 0)
+        {
+            this.videoindex = 0;
+            return;
+        }
+
+        if (videoindex < 0 || videoindex >= videoPaths.Count)
         {
             videoindex = 0;
         }
         this.videoindex = videoindex;
         this.imgstopped = imgstopped;
+        VideoChanged?.Invoke(this.videoindex);
         if (videoindex < videoPaths.Count)
         {
             if (autoResetCroutine != null)
@@ -957,8 +1065,6 @@ public class LitVCR : MonoBehaviour
                         return;
                     }
                 }
-
-                SkipNextScreenSaver();
 
                 if (LoopMode.all.ToString().Equals(GetLoopMode())) //列表循环播放
                 {

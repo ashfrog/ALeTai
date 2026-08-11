@@ -4,6 +4,7 @@
 public class SettingsManager
 {
     public SGraphicsSettings Graphics { get; }
+    public CameraSettings Camera { get; }
     public GameSettings Game { get; }
     public IPSettings IPHost { get; }
     public PathSettings Path { get; }
@@ -11,6 +12,7 @@ public class SettingsManager
     public SettingsManager(IniConfig config)
     {
         Graphics = new SGraphicsSettings(config);
+        Camera = new CameraSettings(config);
         Game = new GameSettings(config);
         IPHost = new IPSettings(config);
         Path = new PathSettings(config);
