@@ -509,7 +509,7 @@ public class LitVCR : MonoBehaviour
             {
                 if (FileUtils.IsMovFile(videoPaths[videoindex]))
                 {
-                    tabSwitcher.SwitchTab(TabMode.视频);
+                    tabSwitcher.SwitchTab(2); //视频tab
                     PlayingPlayer.Control.Play();
                     DisableImg(rawimage, _mediaDisplay);
                 }
@@ -642,7 +642,7 @@ public class LitVCR : MonoBehaviour
             yield return new WaitForSeconds(Settings.ini.Game.ReloadUrlAfterDelay);
             if (canvasWebViewPrefab != null && canvasWebViewPrefab.WebView != null)
             {
-                if (IsWebUrl(videoPaths[videoindex]))
+                if (videoPaths!=null && videoPaths.Count>0 && IsWebUrl(videoPaths[videoindex]))
                 {
                     LoadUrlWhenReady(videoPaths[videoindex]);
                 }
@@ -767,13 +767,13 @@ public class LitVCR : MonoBehaviour
             //如果videoPaths[videoindex]是网页路径
             if (IsWebUrl(videoPaths[videoindex]))
             {
-                tabSwitcher.SwitchTab(TabMode.网页);
+                tabSwitcher.SwitchTab(2);
                 LoadUrlWhenReady(videoPaths[videoindex]);
                 Stop();
             }
             else
             {
-                tabSwitcher.SwitchTab(TabMode.视频);
+                tabSwitcher.SwitchTab(0);
                 if (File.Exists(videoPaths[videoindex]))
                 {
                     this.videoindex = videoindex;
@@ -883,7 +883,7 @@ public class LitVCR : MonoBehaviour
         }
         else //不在播放列表中 
         {
-            tabSwitcher.SwitchTab(TabMode.视频);
+            tabSwitcher.SwitchTab(2);
             string screensaverfile = Path.Combine(persistentDataPath, GetScreenSaver());
             if (File.Exists(screensaverfile)) //屏保图片存在
             {

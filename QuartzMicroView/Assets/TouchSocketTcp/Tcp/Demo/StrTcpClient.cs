@@ -48,24 +48,6 @@ public class StrTcpClient : MonoBehaviour
         reconnectCoroutine = StartCoroutine(LoopReconnect());
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            Send("abc");
-        }
-
-        curt += Time.deltaTime;
-        if (curt > wt)
-        {
-            curt = 0;
-            if (tabSwitcher_time != null)
-            {
-                tabSwitcher_time.SwitchTab(PanelType.时间);
-            }
-        }
-    }
-
     public async Task InitConfigAsync(string ipPort)
     {
         iplog = ipPort;
@@ -163,21 +145,6 @@ public class StrTcpClient : MonoBehaviour
 
     private void HandleReceived(string hexString, string message)
     {
-        Debug.Log("StrTcp 收到Hex消息:" + hexString);
-        if ("AAAAAAAAA1".Equals(hexString))
-        {
-            Debug.Log("开门联动");
-            if (tabSwitcher_time != null)
-            {
-                tabSwitcher_time.SwitchTab(PanelType.视频);
-            }
-            if (fHTcpClient_VCRPlayer != null && fHTcpClient_VCRPlayer._vcr != null)
-            {
-                fHTcpClient_VCRPlayer._vcr.PlayNext();
-            }
-            curt = 0;
-        }
-        StrTcpClientReceive?.Invoke(message);
     }
 
     public async void Send(string message)
