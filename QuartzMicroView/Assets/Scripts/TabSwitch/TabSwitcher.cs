@@ -99,9 +99,17 @@ public class TabSwitcher : MonoBehaviour
     // 更新Tab页面的显示状态
     private void UpdateTabPages()
     {
+        GameObject selectedPage = currentTabIndex >= 0 && currentTabIndex < tabPages.Length
+            ? tabPages[currentTabIndex]
+            : null;
+
         for (int i = 0; i < tabPages.Length; i++)
         {
-            tabPages[i].SetActive(i == currentTabIndex);
+            if (tabPages[i] != null)
+            {
+                // 多个Tab可以共享同一个页面对象；按引用判断可避免后面的重复项将其再次隐藏。
+                tabPages[i].SetActive(tabPages[i] == selectedPage);
+            }
         }
     }
 
