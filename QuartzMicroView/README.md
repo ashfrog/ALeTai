@@ -1,2 +1,4 @@
-石英显微镜观察程序
+# MediaPlayerServer
+
+媒体播放器带控制服务
 

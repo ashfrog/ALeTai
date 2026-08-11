@@ -1,0 +1,32 @@
+ TCP UDP 4848 http (http://localhost/control?cmdstr=下面指令)
+ 播放 				PlayVideo   
+ 暂停 				PauseVideo
+ 停止并返回 		StopVideo		如果设置了屏保的就显示屏保
+ 播放上一个 		PlayNext  	 	(自动跳过屏保)
+ 播放下一个 		PlayPrevious 	(自动跳过屏保)
+ 音量加 			SoundUp		 	(一次加0.1)
+ 音量减 			SoundDown
+ 获取音量 			GetVolumn     	返回字符串示例 Volumn|0.5 (范围0-1)
+ 设置音量 			SetVolumn|0.5
+ 索引播放视频 		PlayVideo|*0
+ 文件名播放视频 	PlayVideo|abc.mp4
+ 
+ 播放单个文件后停止 Loop|none
+ 列表视频循环播放 	Loop|all
+ 单个视频循环播放 	Loop|one
+ 获取循环状态 	    GetLoop 	返回Loop|none 或 Loop|all 或 Loop|one
+ 
+ 视频列表读取		FileList 		返回字符串示例 FileList|0.jpg,1.jpg,2.mp4
+ 
+ 拖动进度条 	  	VideoSeek|0.5      		(范围0-1)
+ 获取进度条等状态 	GetPlayInfo            	返回字符串示例 PlayInfo|12844.67,42960,1,2024-06-29 13-22-50.mkv     备注: PlayInfo|当前播放时长,视频总时长,视频在列表中下标,视频文件名
+ 
+ 设置屏保			SetScreenSaver|abc.jpg
+ 获取屏保			GetScreenSaver         	返回字符串示例	ScreenSaver|abc.jpg
+ 
+ 获取帮助			Help				
+ 
+ 
+HTTP
+ 远程上传视频图片 读取列表 改文件名等功能请访问
+ https://apifox.com/apidoc/shared-cbffe5ed-2141-4627-bdeb-64706abe6c3c

@@ -37,3 +37,5 @@ $RECYCLE.BIN/
 *.lnk
 *.7z
 Release
+**/Assets/AVProVideo/
+**/Assets/Vuplex/
