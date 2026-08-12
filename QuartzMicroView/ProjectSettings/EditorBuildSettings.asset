@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MediaPlayerServer.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/MicroViewer.unity
+    guid: 7bcf24004bab38d468831d45ac66955f
   m_configObjects: {}

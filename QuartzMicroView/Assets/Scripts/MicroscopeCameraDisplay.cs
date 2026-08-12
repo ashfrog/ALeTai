@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ using UnityEngine.UI;
 public class MicroscopeCameraDisplay : MonoBehaviour
 {
     [SerializeField] private RawImage target;
+    [SerializeField] private TMP_Text statusText;
 
     private WebCamTexture webcamTexture;
     private Coroutine monitorCoroutine;
@@ -244,6 +246,7 @@ public class MicroscopeCameraDisplay : MonoBehaviour
         target.color = Color.black;
         target.uvRect = new Rect(0f, 0f, 1f, 1f);
         target.rectTransform.localEulerAngles = Vector3.zero;
+        SetStatus("摄像头已断开，等待重新连接...");
     }
 
     private void UpdatePresentation()
@@ -261,6 +264,7 @@ public class MicroscopeCameraDisplay : MonoBehaviour
         if (webcamTexture.width > 16 && webcamTexture.height > 16)
         {
             target.color = Color.white;
+            SetStatus(string.Empty);
         }
 
         int rotation = Settings.ini.Camera.Rotation + webcamTexture.videoRotationAngle;
@@ -274,5 +278,16 @@ public class MicroscopeCameraDisplay : MonoBehaviour
             mirrorY ? 1f : 0f,
             mirrorX ? -1f : 1f,
             mirrorY ? -1f : 1f);
+    }
+
+    private void SetStatus(string message)
+    {
+        if (statusText == null)
+        {
+            return;
+        }
+
+        statusText.text = message;
+        statusText.gameObject.SetActive(!string.IsNullOrEmpty(message));
     }
 }

@@ -14,22 +14,17 @@ public class AdvertisementKiosk : MonoBehaviour
     private IntPtr hWnd;
 
 #if UNITY_STANDALONE_WIN
-    private const int SW_SHOW = 5;
+    private const int SW_SHOWNOACTIVATE = 4;
     private static readonly IntPtr HWND_TOPMOST = new IntPtr(-1);
     private const uint SWP_NOMOVE = 0x0002;
     private const uint SWP_NOSIZE = 0x0001;
+    private const uint SWP_NOACTIVATE = 0x0010;
 
     [DllImport("user32.dll")]
     private static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
 
     [DllImport("user32.dll")]
     private static extern bool ShowWindow(IntPtr hwnd, int nCmdShow);
-
-    [DllImport("user32.dll")]
-    private static extern bool SetForegroundWindow(IntPtr hWnd);
-
-    [DllImport("user32.dll")]
-    private static extern bool BringWindowToTop(IntPtr hWnd);
 
     [DllImport("user32.dll", EntryPoint = "EnumWindows", SetLastError = true)]
     private static extern bool EnumWindows(WNDENUMPROC lpEnumFunc, uint lParam);
@@ -109,6 +104,29 @@ public class AdvertisementKiosk : MonoBehaviour
         return true;
     }
 
+    private static bool SetProcessWindowTopmost(IntPtr hwnd, uint processId)
+    {
+        uint windowProcessId = 0;
+        if (GetParent(hwnd) == IntPtr.Zero)
+        {
+            GetWindowThreadProcessId(hwnd, ref windowProcessId);
+            if (windowProcessId == processId)
+            {
+                ShowWindow(hwnd, SW_SHOWNOACTIVATE);
+                SetWindowPos(
+                    hwnd,
+                    HWND_TOPMOST,
+                    0,
+                    0,
+                    0,
+                    0,
+                    SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE);
+            }
+        }
+
+        return true;
+    }
+
 #endif
 
     private void Start()
@@ -137,6 +155,19 @@ public class AdvertisementKiosk : MonoBehaviour
         {
             Display.displays[i].Activate();
             //Screen.SetResolution(Display.displays[i].renderingWidth, Display.displays[i].renderingHeight, true);
+        }
+
+        // Screen Space - Camera Canvas must target the same display as its event camera.
+        // The Editor's single Game View can hide this mismatch, while a Windows build
+        // filters pointer events by Canvas.targetDisplay on secondary displays.
+        Canvas[] canvases = FindObjectsOfType<Canvas>(true);
+        for (int i = 0; i < canvases.Length; i++)
+        {
+            Canvas canvas = canvases[i];
+            if (canvas.renderMode == RenderMode.ScreenSpaceCamera && canvas.worldCamera != null)
+            {
+                canvas.targetDisplay = canvas.worldCamera.targetDisplay;
+            }
         }
 
 #if UNITY_STANDALONE_WIN && !UNITY_EDITOR
@@ -189,13 +220,11 @@ public class AdvertisementKiosk : MonoBehaviour
         }
 
 #if UNITY_STANDALONE_WIN && !UNITY_EDITOR
-        if (hWnd != IntPtr.Zero)
-        {
-            ShowWindow(hWnd, SW_SHOW);
-            SetForegroundWindow(hWnd);
-            BringWindowToTop(hWnd);
-            SetWindowPos(hWnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
-        }
+        // Unity creates one native window per active display. Keep every window
+        // topmost without activating it; forcing the primary window to the
+        // foreground prevents secondary-display buttons from receiving clicks.
+        uint processId = (uint)Process.GetCurrentProcess().Id;
+        EnumWindows(new WNDENUMPROC(SetProcessWindowTopmost), processId);
 #endif
     }
 
