@@ -133,8 +133,9 @@ public class TMPVideoNameMarquee : MonoBehaviour
             yield return new WaitForSecondsRealtime(edgePause);
             yield return MoveTo(-distance, distance / Mathf.Max(1f, scrollSpeed));
             yield return new WaitForSecondsRealtime(edgePause);
-            yield return MoveTo(0f, distance / Mathf.Max(1f, scrollSpeed));
-            yield return new WaitForSecondsRealtime(edgePause);
+
+            // LED 跑马灯效果：只向左滚动，显示完末尾后直接从第一个字重新开始。
+            labelRect.anchoredPosition = Vector2.zero;
         }
     }
 
