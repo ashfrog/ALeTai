@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 1
-  startPosition: {x: 900, y: 620}
+  startPosition: {x: 1000, y: 800}
   moveOffset: {x: 30, y: 16}
   initialDelay: 0
   startSeconds: 1.2
