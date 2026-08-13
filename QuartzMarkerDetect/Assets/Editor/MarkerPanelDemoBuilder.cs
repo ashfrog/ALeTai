@@ -181,6 +181,15 @@ public static class MarkerPanelDemoBuilder
 
         lines.Configure(centerRect, targets);
         presenter.Configure(eventsSource, lines, null, panels);
+        SerializedObject presenterSettings = new SerializedObject(presenter);
+        presenterSettings.FindProperty("autoArrangeLeaves").boolValue = true;
+        presenterSettings.FindProperty("equalizeLeafAngles").boolValue = true;
+        presenterSettings.FindProperty("minimumLeafAngle").floatValue = 44f;
+        presenterSettings.FindProperty("maxLeafAngleAdjustment").floatValue = 68f;
+        presenterSettings.FindProperty("leafOverlapPadding").floatValue = 48f;
+        presenterSettings.FindProperty("maxLeafOffset").floatValue = 260f;
+        presenterSettings.FindProperty("leafLayoutSpeed").floatValue = 10f;
+        presenterSettings.ApplyModifiedPropertiesWithoutUndo();
         GameObject prefab = PrefabUtility.SaveAsPrefabAsset(root, PrefabPath);
         Object.DestroyImmediate(root);
         return prefab;

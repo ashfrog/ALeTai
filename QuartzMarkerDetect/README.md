@@ -54,6 +54,22 @@ MarKActions  ── Start/Move/End/Undetected ──>  MarkerPanelPresenter
 
 `MarkerDetectSimulationDriver` 可注入 `Start → Move → End → Undetect` 循环。可在 Inspector 调整对象 ID、起点、移动偏移、各阶段时长和是否循环，也可通过组件 Context Menu 单独模拟各状态。
 
+## 展开节点自动避让
+
+`MarkerPanelPresenter` 默认只调整叶子面板和分支线，不移动 `MarkerPanelGroup` 根节点。两个可见组的叶子卡片发生覆盖时，系统在虚拟目标位置上进行多轮稳定求解：先对过小的叶子夹角做小幅均分，再按最小重叠方向推开卡片，并将叶子偏移限制在初始位置附近；根节点仍严格跟随 Marker，因此不会因避让产生抖动。
+
+可在每个 `MarkerPanelGroup` 的 Inspector 调整：
+
+- `Auto Arrange Leaves`：启用/禁用叶子自动布局。
+- `Equalize Leaf Angles`：启用过小夹角的均分补偿。
+- `Minimum Leaf Angle`：同组叶子的最小夹角，默认 44°。
+- `Max Leaf Angle Adjustment`：单个叶子的最大角度调整，默认 68°。
+- `Leaf Overlap Padding`：叶子卡片之间的最小间距，默认 48 Canvas 单位。
+- `Max Leaf Offset`：叶子相对初始位置的最大偏移，默认 260 Canvas 单位。
+- `Leaf Layout Speed`：叶子和分支线的平滑调整速度，默认 10。
+
+演示场景构建器会为新生成的 `MarkerPanelGroup.prefab` 写入上述默认值。
+
 ## 坐标与多屏
 
 启用 `useCombinedDisplayCoordinates` 时，检测坐标按整块拼接屏左上角为原点；`displayIndex`、`combinedDisplayWidth/Height` 和 `singleDisplayWidth` 决定目标 Canvas 的转换。`MultiDisplayActivator` 会在独立程序启动时激活已连接的扩展屏。

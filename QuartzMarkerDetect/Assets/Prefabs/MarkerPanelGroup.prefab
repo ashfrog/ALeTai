@@ -404,8 +404,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0173, y: -25.021606}
-  m_SizeDelta: {x: 1692.6638, y: 828.278}
+  m_AnchoredPosition: {x: -1.0173, y: 71.97754}
+  m_SizeDelta: {x: 2017.4976, y: 1392.2256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3558451123100779111
 CanvasRenderer:
@@ -672,6 +672,13 @@ MonoBehaviour:
   followSpeed: 12
   fadeDuration: 0.2
   panelRevealAt: 0.65
+  autoArrangeLeaves: 1
+  equalizeLeafAngles: 1
+  minimumLeafAngle: 44
+  maxLeafAngleAdjustment: 68
+  leafOverlapPadding: 48
+  maxLeafOffset: 260
+  leafLayoutSpeed: 10
 --- !u!1 &4272305585105758847
 GameObject:
   m_ObjectHideFlags: 0

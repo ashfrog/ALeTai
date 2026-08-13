@@ -49,6 +49,13 @@ public sealed class RadialPanelLines : MaskableGraphic
         SetAllDirty();
     }
 
+    /// <summary>立即按当前叶子节点位置重建分支线。</summary>
+    public void RebuildNow()
+    {
+        RebuildPaths();
+        SetVerticesDirty();
+    }
+
     public void PlayGrow()
     {
         growTimer = 0f;
