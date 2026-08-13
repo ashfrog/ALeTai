@@ -1,0 +1,15 @@
+{
+  "mapId": "altay",
+  "mapImageSize": { "width": 1410, "height": 925 },
+  "markers": [
+    { "province": "哈巴河", "resourceTypeId": "pegmatite_high_purity", "anchorPx": { "x": 390, "y": 330 }, "note": "伟晶岩型高纯石英重点区" },
+    { "province": "布尔津", "resourceTypeId": "natural_crystal", "anchorPx": { "x": 570, "y": 285 }, "note": "天然水晶矿点" },
+    { "province": "吉木乃", "resourceTypeId": "vein_quartz", "anchorPx": { "x": 330, "y": 515 }, "note": "脉石英远景区" },
+    { "province": "福海", "resourceTypeId": "natural_quartz_sand", "anchorPx": { "x": 750, "y": 555 }, "note": "石英砂资源区" },
+    { "province": "阿勒泰市", "resourceTypeId": "quartzite", "anchorPx": { "x": 720, "y": 370 }, "note": "石英岩调查点" },
+    { "province": "富蕴", "resourceTypeId": "pegmatite_high_purity", "anchorPx": { "x": 930, "y": 420 }, "note": "可可托海伟晶岩成矿带" },
+    { "province": "富蕴", "resourceTypeId": "natural_crystal", "anchorPx": { "x": 965, "y": 450 }, "note": "天然水晶重点区" },
+    { "province": "青河", "resourceTypeId": "quartz_sandstone", "anchorPx": { "x": 1120, "y": 560 }, "note": "石英砂岩资源区" },
+    { "province": "青河", "resourceTypeId": "powder_quartz", "anchorPx": { "x": 1160, "y": 600 }, "note": "粉石英调查点" }
+  ]
+}
