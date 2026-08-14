@@ -21,6 +21,11 @@ namespace QuartzDistribution
         [SerializeField] private Sprite nationalTabDefaultSprite;
         [SerializeField] private Sprite altayTabSelectedSprite;
         [SerializeField] private Sprite altayTabDefaultSprite;
+        [SerializeField] private GameObject nationalLegendPanel;
+        [SerializeField] private GameObject altayLegendPanel;
+        [SerializeField] private GameObject nationalPageTitle;
+        [SerializeField] private GameObject altayPageTitle;
+        [SerializeField] private GameObject altaySupplementalUi;
         [SerializeField] private CanvasGroup infoCard;
         [SerializeField] private Text infoText;
         [SerializeField] private GameObject debugPanel;
@@ -149,6 +154,11 @@ namespace QuartzDistribution
             showingAltay = altay;
             if (nationalLayer != null) nationalLayer.SetActive(!altay);
             if (altayLayer != null) altayLayer.SetActive(altay);
+            if (nationalLegendPanel != null) nationalLegendPanel.SetActive(!altay);
+            if (altayLegendPanel != null) altayLegendPanel.SetActive(altay);
+            if (nationalPageTitle != null) nationalPageTitle.SetActive(!altay);
+            if (altayPageTitle != null) altayPageTitle.SetActive(altay);
+            if (altaySupplementalUi != null) altaySupplementalUi.SetActive(altay);
             SetTabSprite(nationalTabBackground, altay ? nationalTabDefaultSprite : nationalTabSelectedSprite);
             SetTabSprite(altayTabBackground, altay ? altayTabSelectedSprite : altayTabDefaultSprite);
             RefreshMarkers();
