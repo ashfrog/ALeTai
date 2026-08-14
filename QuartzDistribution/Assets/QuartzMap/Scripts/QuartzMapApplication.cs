@@ -130,11 +130,21 @@ namespace QuartzDistribution
         public void ShowMarkerInfo(MarkerHighlightAnimator marker)
         {
             if (infoCard == null || infoText == null) return;
-            infoText.text = string.Format("<b>{0}</b>  ·  {1}\n{2}", marker.Province, marker.ResourceDisplayName, marker.Note);
+            infoText.text = string.Format(
+                "<size=34><color=#72E6FF><b>{0}</b></color></size>\n<size=24><color=#E4FAFF>{1}</color></size>",
+                marker.ResourceDisplayName,
+                marker.Note);
             infoCard.DOKill();
-            infoCard.blocksRaycasts = true;
-            infoCard.DOFade(1f, .22f).SetId(this);
-            infoCard.transform.DOPunchScale(Vector3.one * .05f, .3f, 4, .4f).SetId(this);
+            infoCard.transform.DOKill();
+            infoCard.alpha = 0f;
+            infoCard.blocksRaycasts = false;
+            infoCard.transform.localScale = Vector3.one * .96f;
+
+            Sequence sequence = DOTween.Sequence().SetTarget(infoCard).SetId(this);
+            sequence.Append(infoCard.DOFade(1f, .18f));
+            sequence.Join(infoCard.transform.DOScale(1f, .22f).SetEase(Ease.OutCubic));
+            sequence.AppendInterval(2f);
+            sequence.Append(infoCard.DOFade(0f, .5f).SetEase(Ease.InQuad));
         }
 
         private void UnbindSceneNodes()
