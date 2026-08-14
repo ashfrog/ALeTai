@@ -17,6 +17,10 @@ namespace QuartzDistribution
         [SerializeField] private Button altayTabButton;
         [SerializeField] private Image nationalTabBackground;
         [SerializeField] private Image altayTabBackground;
+        [SerializeField] private Sprite nationalTabSelectedSprite;
+        [SerializeField] private Sprite nationalTabDefaultSprite;
+        [SerializeField] private Sprite altayTabSelectedSprite;
+        [SerializeField] private Sprite altayTabDefaultSprite;
         [SerializeField] private CanvasGroup infoCard;
         [SerializeField] private Text infoText;
         [SerializeField] private GameObject debugPanel;
@@ -145,8 +149,8 @@ namespace QuartzDistribution
             showingAltay = altay;
             if (nationalLayer != null) nationalLayer.SetActive(!altay);
             if (altayLayer != null) altayLayer.SetActive(altay);
-            if (nationalTabBackground != null) nationalTabBackground.color = altay ? DarkTab : ActiveTab;
-            if (altayTabBackground != null) altayTabBackground.color = altay ? ActiveTab : DarkTab;
+            SetTabSprite(nationalTabBackground, altay ? nationalTabDefaultSprite : nationalTabSelectedSprite);
+            SetTabSprite(altayTabBackground, altay ? altayTabSelectedSprite : altayTabDefaultSprite);
             RefreshMarkers();
 
             GameObject active = altay ? altayLayer : nationalLayer;
@@ -171,13 +175,18 @@ namespace QuartzDistribution
             }
         }
 
-        private static readonly Color ActiveTab = new Color(0f, .55f, 1f, .48f);
-        private static readonly Color DarkTab = new Color(0f, .12f, .24f, .55f);
+        private static void SetTabSprite(Image background, Sprite sprite)
+        {
+            if (background == null) return;
+            if (sprite != null) background.sprite = sprite;
+            background.color = Color.white;
+        }
 
 #if UNITY_EDITOR
         public void EditorAssign(RectTransform map, GameObject national, GameObject altay, Button nationalButton,
             Button altayButton, Image nationalBackground, Image altayBackground, CanvasGroup card, Text cardText,
-            GameObject anchorPanel, Text anchorText)
+            GameObject anchorPanel, Text anchorText, Sprite nationalSelected, Sprite nationalDefault,
+            Sprite altaySelected, Sprite altayDefault)
         {
             mapRect = map;
             nationalLayer = national;
@@ -186,6 +195,10 @@ namespace QuartzDistribution
             altayTabButton = altayButton;
             nationalTabBackground = nationalBackground;
             altayTabBackground = altayBackground;
+            nationalTabSelectedSprite = nationalSelected;
+            nationalTabDefaultSprite = nationalDefault;
+            altayTabSelectedSprite = altaySelected;
+            altayTabDefaultSprite = altayDefault;
             infoCard = card;
             infoText = cardText;
             debugPanel = anchorPanel;
