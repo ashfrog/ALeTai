@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
+using RenderHeads.Media.AVProVideo;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,6 +32,12 @@ namespace QuartzDistribution
         [SerializeField] private GameObject debugPanel;
         [SerializeField] private Text debugText;
 
+        [Header("背景视频")]
+        [SerializeField] private MediaPlayer backgroundMediaPlayer;
+        [SerializeField] private DisplayUGUI backgroundVideoDisplay;
+        [SerializeField] private string nationalVideoPath = "石英的分布_全国.mp4";
+        [SerializeField] private string altayVideoPath = "石英的分布_阿勒泰.mp4";
+
         [Header("锚点坐标")]
         [SerializeField] private Vector2 nationalReferenceSize = new Vector2(1410f, 925f);
         [SerializeField] private Vector2 altayReferenceSize = new Vector2(1410f, 925f);
@@ -42,6 +49,7 @@ namespace QuartzDistribution
         private readonly List<MarkerHighlightAnimator> altayMarkers = new List<MarkerHighlightAnimator>();
         private bool showingAltay;
         private bool debugVisible;
+        private string currentBackgroundVideoPath;
 
         public event Action<IReadOnlyCollection<string>> OnLegendSelectionChanged;
 
@@ -54,6 +62,7 @@ namespace QuartzDistribution
         private void OnDestroy()
         {
             DOTween.Kill(this);
+            if (backgroundMediaPlayer != null) backgroundMediaPlayer.CloseMedia();
         }
 
         private void Update()
@@ -152,6 +161,7 @@ namespace QuartzDistribution
         private void SetMap(bool altay, bool immediate)
         {
             showingAltay = altay;
+            SetBackgroundVideo(altay ? altayVideoPath : nationalVideoPath);
             if (nationalLayer != null) nationalLayer.SetActive(!altay);
             if (altayLayer != null) altayLayer.SetActive(altay);
             if (nationalLegendPanel != null) nationalLegendPanel.SetActive(!altay);
@@ -171,6 +181,24 @@ namespace QuartzDistribution
                 group.alpha = 0f;
                 group.DOFade(1f, .35f).SetUpdate(true).SetId(this);
             }
+        }
+
+        private void SetBackgroundVideo(string relativePath)
+        {
+            if (backgroundMediaPlayer == null || string.IsNullOrEmpty(relativePath)) return;
+
+            backgroundMediaPlayer.Loop = true;
+            if (currentBackgroundVideoPath == relativePath)
+            {
+                backgroundMediaPlayer.Play();
+                return;
+            }
+
+            currentBackgroundVideoPath = relativePath;
+            backgroundMediaPlayer.OpenMedia(
+                MediaPathType.RelativeToStreamingAssetsFolder,
+                relativePath,
+                true);
         }
 
         private void RefreshMarkers()
