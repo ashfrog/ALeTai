@@ -32,6 +32,9 @@ namespace QuartzDistribution
         [SerializeField] private GameObject debugPanel;
         [SerializeField] private Text debugText;
 
+        [Header("交互配置")]
+        [SerializeField] private bool enableMarkerInfoPopup;
+
         [Header("背景视频")]
         [SerializeField] private MediaPlayer backgroundMediaPlayer;
         [SerializeField] private DisplayUGUI backgroundVideoDisplay;
@@ -52,6 +55,8 @@ namespace QuartzDistribution
         private string currentBackgroundVideoPath;
 
         public event Action<IReadOnlyCollection<string>> OnLegendSelectionChanged;
+
+        public bool EnableMarkerInfoPopup { get { return enableMarkerInfoPopup; } }
 
         private void Awake()
         {

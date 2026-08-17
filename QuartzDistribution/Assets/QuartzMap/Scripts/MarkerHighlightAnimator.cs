@@ -89,7 +89,7 @@ namespace QuartzDistribution
 
         private void ShowInfo()
         {
-            if (application != null) application.ShowMarkerInfo(this);
+            if (application != null && application.EnableMarkerInfoPopup) application.ShowMarkerInfo(this);
         }
 
         private void StopTween()
