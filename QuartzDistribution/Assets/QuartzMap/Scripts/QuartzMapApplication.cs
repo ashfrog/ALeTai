@@ -33,7 +33,7 @@ namespace QuartzDistribution
         [SerializeField] private Text debugText;
 
         [Header("交互配置")]
-        [SerializeField] private bool enableMarkerInfoPopup;
+        [SerializeField] private bool enableMarkerInfoPopup = true;
 
         [Header("背景视频")]
         [SerializeField] private MediaPlayer backgroundMediaPlayer;
@@ -135,10 +135,15 @@ namespace QuartzDistribution
         public void ShowMarkerInfo(MarkerHighlightAnimator marker)
         {
             if (infoCard == null || infoText == null) return;
-            infoText.text = string.Format(
-                "<size=34><color=#72E6FF><b>{0}</b></color></size>\n<size=24><color=#E4FAFF>{1}</color></size>",
-                marker.ResourceDisplayName,
-                marker.Note);
+            string title = string.Format(
+                "<size=34><color=#72E6FF><b>{0}</b></color></size>",
+                marker.ResourceDisplayName);
+            infoText.text = string.IsNullOrWhiteSpace(marker.Note)
+                ? title
+                : string.Format(
+                    "{0}\n<size=24><color=#E4FAFF>{1}</color></size>",
+                    title,
+                    marker.Note);
             infoCard.DOKill();
             infoCard.transform.DOKill();
             infoCard.alpha = 0f;

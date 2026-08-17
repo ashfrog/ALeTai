@@ -131,10 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: "\u65B0\u7586"
+  province: ""
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
-  note: "\u51C6\u5676\u5C14\u53CA\u5929\u5C71\u5317\u7F18\u77FF\u533A"
+  note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
   markerColor: {r: 0.9607843, g: 0.8156863, b: 0.2, a: 1}
   markerGraphic: {fileID: 4151976234580490228}
   markerOutline: {fileID: 4347601948217177208}
