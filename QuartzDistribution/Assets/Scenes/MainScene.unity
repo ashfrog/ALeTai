@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -220,11 +220,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -537,7 +537,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -625,11 +625,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -671,7 +671,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -759,11 +759,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 141064799}
   - component: {fileID: 141064798}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -1157,7 +1157,7 @@ GameObject:
   - component: {fileID: 184915679}
   - component: {fileID: 184915683}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: quartz_sandstone
   resourceDisplayName: "\u77F3\u82F1\u7802\u5CA9"
   note: "\u77F3\u82F1\u7802\u5CA9\u8D44\u6E90\u70B9"
@@ -1467,7 +1467,7 @@ GameObject:
   - component: {fileID: 211388340}
   - component: {fileID: 211388339}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1512,7 +1512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -1692,7 +1692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &240329559
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1757,7 +1757,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -1845,11 +1845,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -1901,7 +1901,7 @@ GameObject:
   - component: {fileID: 275196922}
   - component: {fileID: 275196921}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1946,7 +1946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -2122,7 +2122,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -2210,11 +2210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -2251,7 +2251,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -2339,11 +2339,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -2385,7 +2385,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -2473,11 +2473,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -2529,7 +2529,7 @@ GameObject:
   - component: {fileID: 358256612}
   - component: {fileID: 358256611}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2574,7 +2574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -2676,7 +2676,7 @@ GameObject:
   - component: {fileID: 361150187}
   - component: {fileID: 361150186}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2721,7 +2721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -2823,7 +2823,7 @@ GameObject:
   - component: {fileID: 403631266}
   - component: {fileID: 403631270}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2860,7 +2860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: powder_quartz
   resourceDisplayName: "\u7C89\u77F3\u82F1"
   note: "\u7C89\u77F3\u82F1\u8C03\u67E5\u70B9"
@@ -3091,7 +3091,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -3179,11 +3179,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -3220,7 +3220,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -3308,11 +3308,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -3349,7 +3349,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -3437,11 +3437,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3463,7 +3463,7 @@ GameObject:
   - component: {fileID: 505361228}
   - component: {fileID: 505361227}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3508,7 +3508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -3684,7 +3684,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -3772,11 +3772,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -4145,7 +4145,7 @@ GameObject:
   - component: {fileID: 581924542}
   - component: {fileID: 581924541}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4190,7 +4190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -4493,7 +4493,7 @@ GameObject:
   - component: {fileID: 607227523}
   - component: {fileID: 607227522}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4538,7 +4538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -4645,7 +4645,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -4717,7 +4717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288738437014557036, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 13.6
+      value: 13.599976
       objectReference: {fileID: 0}
     - target: {fileID: 4288738437014557036, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4733,11 +4733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -4868,7 +4868,7 @@ GameObject:
   - component: {fileID: 676185968}
   - component: {fileID: 676185967}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4913,7 +4913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -5020,7 +5020,7 @@ GameObject:
   - component: {fileID: 714378321}
   - component: {fileID: 714378320}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5065,7 +5065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -5167,7 +5167,7 @@ GameObject:
   - component: {fileID: 745653744}
   - component: {fileID: 745653743}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5212,7 +5212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -5309,7 +5309,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -5397,11 +5397,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -5518,7 +5518,7 @@ GameObject:
   - component: {fileID: 812857953}
   - component: {fileID: 812857952}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5563,7 +5563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -5665,7 +5665,7 @@ GameObject:
   - component: {fileID: 814598269}
   - component: {fileID: 814598268}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5710,7 +5710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: vein_quartz
   resourceDisplayName: "\u8109\u77F3\u82F1"
   note: "\u8109\u77F3\u82F1\u8D44\u6E90\u70B9"
@@ -5812,7 +5812,7 @@ GameObject:
   - component: {fileID: 837507373}
   - component: {fileID: 837507372}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5857,7 +5857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -6118,7 +6118,7 @@ GameObject:
   - component: {fileID: 909965496}
   - component: {fileID: 909965495}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6163,7 +6163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -6325,7 +6325,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -6413,11 +6413,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -6668,7 +6668,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -6756,11 +6756,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -6877,7 +6877,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -6965,11 +6965,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -7011,7 +7011,7 @@ GameObject:
   - component: {fileID: 978204263}
   - component: {fileID: 978204267}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7048,7 +7048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: vein_quartz
   resourceDisplayName: "\u8109\u77F3\u82F1"
   note: "\u8109\u77F3\u82F1\u8D44\u6E90\u70B9"
@@ -7158,7 +7158,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -7246,11 +7246,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7272,7 +7272,7 @@ GameObject:
   - component: {fileID: 1008142865}
   - component: {fileID: 1008142864}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7317,7 +7317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -7620,7 +7620,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -7708,11 +7708,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -7754,7 +7754,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_IsActive
@@ -7846,11 +7846,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -7892,7 +7892,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -7980,11 +7980,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: resourceDisplayName
@@ -8010,7 +8010,7 @@ GameObject:
   - component: {fileID: 1114866255}
   - component: {fileID: 1114866254}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8055,7 +8055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -8152,7 +8152,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -8240,11 +8240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8298,7 +8298,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -8386,11 +8386,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -8427,7 +8427,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -8515,11 +8515,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -8561,7 +8561,7 @@ GameObject:
   - component: {fileID: 1212427040}
   - component: {fileID: 1212427044}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8598,7 +8598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_crystal
   resourceDisplayName: "\u5929\u7136\u6C34\u6676"
   note: "\u5929\u7136\u6C34\u6676\u77FF\u70B9"
@@ -8793,7 +8793,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -8881,11 +8881,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: resourceDisplayName
@@ -8906,7 +8906,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -8994,11 +8994,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -9059,7 +9059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 189, y: -38.92}
+  m_AnchoredPosition: {x: 189, y: -38.91992}
   m_SizeDelta: {x: 2098, y: 1476}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1300544316
@@ -9107,7 +9107,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -9195,11 +9195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -9246,7 +9246,7 @@ GameObject:
   - component: {fileID: 1341698344}
   - component: {fileID: 1341698343}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9291,7 +9291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -9460,7 +9460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 189, y: -38.92}
+  m_AnchoredPosition: {x: 189, y: -38.91992}
   m_SizeDelta: {x: 2098, y: 1476}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1379448294
@@ -9508,7 +9508,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -9596,11 +9596,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: resourceDisplayName
@@ -9645,7 +9645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 189, y: -38.92}
+  m_AnchoredPosition: {x: 189, y: -38.91992}
   m_SizeDelta: {x: 2098, y: 1476}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1389499220
@@ -9698,7 +9698,7 @@ GameObject:
   - component: {fileID: 1404828633}
   - component: {fileID: 1404828637}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9735,7 +9735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -9850,7 +9850,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -9938,11 +9938,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: resourceDisplayName
@@ -9968,7 +9968,7 @@ GameObject:
   - component: {fileID: 1427113541}
   - component: {fileID: 1427113540}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10013,7 +10013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -10110,7 +10110,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -10198,11 +10198,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -10244,7 +10244,7 @@ GameObject:
   - component: {fileID: 1431976210}
   - component: {fileID: 1431976209}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10289,7 +10289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -10386,7 +10386,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -10474,11 +10474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -10520,7 +10520,7 @@ GameObject:
   - component: {fileID: 1433276495}
   - component: {fileID: 1433276494}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10565,7 +10565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -10662,7 +10662,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -10750,11 +10750,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -10868,7 +10868,7 @@ GameObject:
   - component: {fileID: 1448601858}
   - component: {fileID: 1448601857}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10913,7 +10913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -11306,7 +11306,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -11378,7 +11378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288738437014557036, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.2
+      value: -6.199951
       objectReference: {fileID: 0}
     - target: {fileID: 4288738437014557036, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11394,11 +11394,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: resourceTypeId
@@ -11624,7 +11624,7 @@ GameObject:
   - component: {fileID: 1623451381}
   - component: {fileID: 1623451380}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11669,7 +11669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -11766,7 +11766,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -11854,11 +11854,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -11994,7 +11994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.028, y: 0.18}
   m_AnchorMax: {x: 0.034, y: 0.82}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_AnchoredPosition: {x: -0.00024414062, y: 0}
   m_SizeDelta: {x: 0.000030517578, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1653914593
@@ -12050,7 +12050,7 @@ GameObject:
   - component: {fileID: 1657813698}
   - component: {fileID: 1657813697}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12095,7 +12095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -12202,7 +12202,7 @@ GameObject:
   - component: {fileID: 1665908875}
   - component: {fileID: 1665908874}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12247,7 +12247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -12441,7 +12441,7 @@ GameObject:
   - component: {fileID: 1691695527}
   - component: {fileID: 1691695526}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12486,7 +12486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_quartz_sand
   resourceDisplayName: "\u5929\u7136\u77F3\u82F1\u7802"
   note: "\u5929\u7136\u77F3\u82F1\u7802\u8D44\u6E90\u70B9"
@@ -12583,7 +12583,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -12671,11 +12671,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -12719,7 +12719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1726351836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13175,7 +13175,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -13263,11 +13263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -13304,7 +13304,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -13372,11 +13372,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288738437014557036, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -197.70001
+      value: -197.69995
       objectReference: {fileID: 0}
     - target: {fileID: 4288738437014557036, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.9000244
+      value: -1.8999023
       objectReference: {fileID: 0}
     - target: {fileID: 4288738437014557036, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13392,11 +13392,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -13601,7 +13601,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -13689,11 +13689,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -13735,7 +13735,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -13823,11 +13823,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -14267,7 +14267,7 @@ GameObject:
   - component: {fileID: 1906333635}
   - component: {fileID: 1906333639}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14304,7 +14304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -14419,7 +14419,7 @@ GameObject:
   - component: {fileID: 1927563885}
   - component: {fileID: 1927563884}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14464,7 +14464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: pegmatite_high_purity
   resourceDisplayName: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1"
   note: "\u4F1F\u6676\u5CA9\u578B\u9AD8\u7EAF\u77F3\u82F1\u77FF\u70B9"
@@ -14566,7 +14566,7 @@ GameObject:
   - component: {fileID: 1949251827}
   - component: {fileID: 1949251831}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14603,7 +14603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: quartzite
   resourceDisplayName: "\u77F3\u82F1\u5CA9"
   note: "\u77F3\u82F1\u5CA9\u8C03\u67E5\u70B9"
@@ -14800,7 +14800,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -14868,11 +14868,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288738437014557036, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -33.9
+      value: -33.899902
       objectReference: {fileID: 0}
     - target: {fileID: 4288738437014557036, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.6
+      value: -8.599976
       objectReference: {fileID: 0}
     - target: {fileID: 4288738437014557036, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14888,11 +14888,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -15135,7 +15135,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -15223,11 +15223,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
@@ -15274,7 +15274,7 @@ GameObject:
   - component: {fileID: 2084896778}
   - component: {fileID: 2084896782}
   m_Layer: 5
-  m_Name: "Marker"
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15311,7 +15311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bb1b829ecdfab40a40c5b956224bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  province: ""
+  province: 
   resourceTypeId: natural_crystal
   resourceDisplayName: "\u5929\u7136\u6C34\u6676"
   note: "\u5929\u7136\u6C34\u6676\u77FF\u70B9"
@@ -15416,7 +15416,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893898312841129409, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Name
-      value: "Marker"
+      value: Marker
       objectReference: {fileID: 0}
     - target: {fileID: 4151976234580490228, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: m_Color.b
@@ -15504,11 +15504,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: note
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: province
-      value: ""
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5622155917612687497, guid: 48007a9e9408a7c4196a42b780c3f607, type: 3}
       propertyPath: markerColor.b
