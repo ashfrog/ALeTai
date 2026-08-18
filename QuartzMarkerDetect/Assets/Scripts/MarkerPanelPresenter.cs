@@ -162,9 +162,10 @@ public sealed class MarkerPanelPresenter : MonoBehaviour
         Vector2 target = details.objectCenterPosition;
         if (useCombinedDisplayCoordinates)
         {
-            // 检测坐标以整块 7680x2160 宽屏左上角为原点；转换为当前 4K Canvas 的中心坐标。
+            // ObjectDetect 直接返回 Touch.position：整块宽屏左下角为原点。
+            // 转换为当前 4K Canvas 以中心为原点的 anchoredPosition。
             target.x = target.x - displayIndex * singleDisplayWidth - singleDisplayWidth * 0.5f;
-            target.y = combinedDisplayHeight * 0.5f - target.y;
+            target.y = target.y - combinedDisplayHeight * 0.5f;
         }
         else if (positionIsScreenPoint && canvasRect != null)
         {

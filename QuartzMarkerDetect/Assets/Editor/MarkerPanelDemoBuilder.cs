@@ -27,21 +27,24 @@ public static class MarkerPanelDemoBuilder
         CreateBackground(display2Canvas.transform, true);
         new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
         new GameObject("MultiDisplayController", typeof(MultiDisplayActivator));
+        // 与官方 SampleScene 保持一致：场景中只保留一个真实三点触控检测器。
+        new GameObject("MarkerDetectRuntime", typeof(ObjectDetect));
 
         GameObject prefab = CreatePrefab();
-        // 十个检测点使用整块 7680x2160 的左上角坐标；ID 5/6 靠近中缝，用于演示跨屏标注。
+        // ObjectDetect 直接使用 Touch.position，坐标原点在整块 7680x2160 屏幕左下角。
+        // ID 5/6 靠近中缝，用于演示跨屏标注。
         Vector2[] combinedPositions =
         {
-            new Vector2(900f, 620f),
-            new Vector2(2600f, 620f),
-            new Vector2(1750f, 1580f),
-            new Vector2(650f, 1740f),
-            new Vector2(3700f, 980f),
-            new Vector2(3980f, 1260f),
-            new Vector2(5080f, 620f),
-            new Vector2(6780f, 620f),
-            new Vector2(5930f, 1580f),
-            new Vector2(7080f, 1740f)
+            new Vector2(900f, 1540f),
+            new Vector2(2600f, 1540f),
+            new Vector2(1750f, 580f),
+            new Vector2(650f, 420f),
+            new Vector2(3700f, 1180f),
+            new Vector2(3980f, 900f),
+            new Vector2(5080f, 1540f),
+            new Vector2(6780f, 1540f),
+            new Vector2(5930f, 580f),
+            new Vector2(7080f, 420f)
         };
         CreateTrackedViews(display1Canvas, prefab, combinedPositions, 0);
         CreateTrackedViews(display2Canvas, prefab, combinedPositions, 1);
@@ -100,13 +103,16 @@ public static class MarkerPanelDemoBuilder
             simulation.FindProperty("loop").boolValue = true;
             simulation.ApplyModifiedPropertiesWithoutUndo();
         }
+
+        // 默认必须关闭，否则模拟数据会覆盖真实 ObjectDetect 的识别字典。
+        simulationRoot.SetActive(false);
     }
 
     private static Vector2 CombinedToDisplayLocal(Vector2 combinedPosition, int displayIndex)
     {
         return new Vector2(
             combinedPosition.x - displayIndex * Display4KResolution.x - Display4KResolution.x * 0.5f,
-            Display4KResolution.y * 0.5f - combinedPosition.y);
+            combinedPosition.y - Display4KResolution.y * 0.5f);
     }
 
     private static Canvas CreateCanvas(string name, int targetDisplay)

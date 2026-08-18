@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 5
-  startPosition: {x: 3700, y: 980}
+  startPosition: {x: 3700, y: 1180}
   moveOffset: {x: 30, y: 16}
   initialDelay: 5.36
   startSeconds: 1.2
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 8
-  startPosition: {x: 6780, y: 620}
+  startPosition: {x: 6780, y: 1540}
   moveOffset: {x: 30, y: 16}
   initialDelay: 2.68
   startSeconds: 1.2
@@ -1034,7 +1034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &316359103
 Transform:
   m_ObjectHideFlags: 0
@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 1
-  startPosition: {x: 1000, y: 800}
+  startPosition: {x: 900, y: 1540}
   moveOffset: {x: 30, y: 16}
   initialDelay: 0
   startSeconds: 1.2
@@ -1443,7 +1443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 9
-  startPosition: {x: 5930, y: 1580}
+  startPosition: {x: 5930, y: 580}
   moveOffset: {x: 30, y: 16}
   initialDelay: 4.02
   startSeconds: 1.2
@@ -1790,7 +1790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 2
-  startPosition: {x: 2600, y: 620}
+  startPosition: {x: 2600, y: 1540}
   moveOffset: {x: 30, y: 16}
   initialDelay: 1.34
   startSeconds: 1.2
@@ -1844,7 +1844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 10
-  startPosition: {x: 7080, y: 1740}
+  startPosition: {x: 7080, y: 420}
   moveOffset: {x: 30, y: 16}
   initialDelay: 5.36
   startSeconds: 1.2
@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 3
-  startPosition: {x: 1750, y: 1580}
+  startPosition: {x: 1750, y: 580}
   moveOffset: {x: 30, y: 16}
   initialDelay: 2.68
   startSeconds: 1.2
@@ -2521,7 +2521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 7
-  startPosition: {x: 5080, y: 620}
+  startPosition: {x: 5080, y: 1540}
   moveOffset: {x: 30, y: 16}
   initialDelay: 1.34
   startSeconds: 1.2
@@ -3026,6 +3026,50 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5783064112313059293, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
   m_PrefabInstance: {fileID: 1403134591}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1453739936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1453739938}
+  - component: {fileID: 1453739937}
+  m_Layer: 0
+  m_Name: MarkerDetectRuntime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1453739937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453739936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -168364777, guid: a75ae4e96152c9a42a6f9e90c5d201c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1453739938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453739936}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1543995718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3360,7 +3404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 6
-  startPosition: {x: 3980, y: 1260}
+  startPosition: {x: 3980, y: 900}
   moveOffset: {x: 30, y: 16}
   initialDelay: 0
   startSeconds: 1.2
@@ -3880,7 +3924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectID: 4
-  startPosition: {x: 650, y: 1740}
+  startPosition: {x: 650, y: 420}
   moveOffset: {x: 30, y: 16}
   initialDelay: 4.02
   startSeconds: 1.2
@@ -4006,3 +4050,4 @@ SceneRoots:
   - {fileID: 316359103}
   - {fileID: 1905971461}
   - {fileID: 324071627}
+  - {fileID: 1453739938}
