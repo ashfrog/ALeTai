@@ -261,6 +261,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2095688585, guid: 915d34763beb4944d8d1b1b4f45115b7, type: 3}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
       objectReference: {fileID: 0}
@@ -387,6 +391,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
       objectReference: {fileID: 0}
@@ -508,6 +516,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 922923771, guid: 8e5ab0e468c3bd149bde8fce0980daab, type: 3}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
@@ -632,6 +644,10 @@ PrefabInstance:
       objectReference: {fileID: -1945506282, guid: fb8a622a4a559af44bd3341602f12f6d, type: 3}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: displayIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
@@ -913,6 +929,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1053739381, guid: 523aa4e16fbbf274a8bd5192c63e15c5, type: 3}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
@@ -1293,6 +1313,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -804594285, guid: 4ef2371f3c25bb242ab0e100234ad78d, type: 3}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
       objectReference: {fileID: 0}
@@ -1518,6 +1542,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
       objectReference: {fileID: 0}
@@ -1639,6 +1667,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1945506282, guid: fb8a622a4a559af44bd3341602f12f6d, type: 3}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
@@ -1949,6 +1981,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
       objectReference: {fileID: 0}
@@ -2064,6 +2100,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: displayIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
@@ -2371,6 +2411,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -702297527, guid: 83987a1f2f27da841a1123b1ad6b3282, type: 3}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
       objectReference: {fileID: 0}
@@ -2551,6 +2595,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
       objectReference: {fileID: 0}
@@ -2672,6 +2720,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -157740314, guid: 0bdfd3bf81f8f4d4c9065ad7acf991a5, type: 3}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
@@ -2799,6 +2851,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
       objectReference: {fileID: 0}
@@ -2920,6 +2976,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1264238057, guid: 1399b5e710c1a694ca68765cfb27b23a, type: 3}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
@@ -3088,6 +3148,10 @@ PrefabInstance:
       objectReference: {fileID: -157740314, guid: 0bdfd3bf81f8f4d4c9065ad7acf991a5, type: 3}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: displayIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
@@ -3434,6 +3498,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
       objectReference: {fileID: 0}
@@ -3648,6 +3716,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -163735380, guid: 79153ad4369f2fd42861c521531bf428, type: 3}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
       objectReference: {fileID: 0}
@@ -3771,6 +3843,10 @@ PrefabInstance:
       objectReference: {fileID: -804594285, guid: 4ef2371f3c25bb242ab0e100234ad78d, type: 3}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: displayIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
@@ -3941,6 +4017,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1166002386}
     m_Modifications:
+    - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
+      propertyPath: followRotation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1620805703559650549, guid: c37307148f094d94ca3710b8cba70b6e, type: 3}
       propertyPath: useCombinedDisplayCoordinates
       value: 1
