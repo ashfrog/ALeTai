@@ -194,8 +194,9 @@ public static class MarkerPanelDemoBuilder
         lines.Configure(centerRect, targets);
         presenter.Configure(eventsSource, lines, null, panels);
         SerializedObject presenterSettings = new SerializedObject(presenter);
-        presenterSettings.FindProperty("autoArrangeLeaves").boolValue = true;
-        presenterSettings.FindProperty("equalizeLeafAngles").boolValue = true;
+        // 面板位置固定，避免多个 Marker 靠近时自适应避让导致连线来回跳动。
+        presenterSettings.FindProperty("autoArrangeLeaves").boolValue = false;
+        presenterSettings.FindProperty("equalizeLeafAngles").boolValue = false;
         presenterSettings.FindProperty("minimumLeafAngle").floatValue = 44f;
         presenterSettings.FindProperty("maxLeafAngleAdjustment").floatValue = 68f;
         presenterSettings.FindProperty("leafOverlapPadding").floatValue = 48f;
@@ -224,11 +225,20 @@ public static class MarkerPanelDemoBuilder
         outline.effectColor = new Color(0.65f, 1f, 0.88f, 0.9f);
         outline.effectDistance = new Vector2(2f, -2f);
         CanvasGroup group = panel.AddComponent<CanvasGroup>();
-        panel.AddComponent<PanelImageZoomToggle>();
-        CreateText("Label", panel.transform, title, 30, new Vector2(24f, -17f), Vector2.zero, Vector2.one,
-            new Vector2(0f, 1f), new Vector2(-42f, -32f), TextAnchor.UpperLeft).color = Cyan;
-        CreateText("Placeholder", panel.transform, "图片占位区域", 21, new Vector2(24f, -66f), Vector2.zero,
-            Vector2.one, new Vector2(0f, 1f), new Vector2(-42f, -80f), TextAnchor.UpperLeft).color = Color.white;
+        PanelImageZoomToggle zoom = panel.AddComponent<PanelImageZoomToggle>();
+        SerializedObject zoomSettings = new SerializedObject(zoom);
+        zoomSettings.FindProperty("moveAwayFromCenter").boolValue = true;
+        zoomSettings.FindProperty("centerClearance").floatValue = 24f;
+        zoomSettings.ApplyModifiedPropertiesWithoutUndo();
+        Text label = CreateText("Label", panel.transform, title, 30, new Vector2(24f, -17f), Vector2.zero,
+            Vector2.one, new Vector2(0f, 1f), new Vector2(-42f, -32f), TextAnchor.UpperLeft);
+        label.color = Cyan;
+        label.gameObject.SetActive(false);
+        Text placeholder = CreateText("Placeholder", panel.transform, "图片占位区域", 21,
+            new Vector2(24f, -66f), Vector2.zero, Vector2.one, new Vector2(0f, 1f),
+            new Vector2(-42f, -80f), TextAnchor.UpperLeft);
+        placeholder.color = Color.white;
+        placeholder.gameObject.SetActive(false);
         group.alpha = 0f;
         return panel;
     }

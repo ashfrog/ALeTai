@@ -82,8 +82,14 @@ public sealed class RadialPanelLines : MaskableGraphic
         {
             if (panelTargets[i] == null) continue;
             Rect panelRect = GetLocalRect(panelTargets[i]);
-            float horizontalSign = panelRect.center.x >= center.x ? 1f : -1f;
-            float verticalSign = panelRect.center.y >= center.y ? 1f : -1f;
+            // 优先使用同级 UI 的布局坐标判断方向，避免世界/屏幕坐标转换产生的
+            // 亚像素误差让与圆心水平对齐的分支在上下方向之间反复切换。
+            Vector2 layoutDelta = panelTargets[i].parent == centerAnchor.parent
+                ? panelTargets[i].anchoredPosition - centerAnchor.anchoredPosition
+                : panelRect.center - center;
+            float horizontalSign = layoutDelta.x < -0.01f ? -1f : 1f;
+            // 完全水平对齐时固定使用上方斜线，保证路径方向稳定。
+            float verticalSign = layoutDelta.y < -0.01f ? -1f : 1f;
 
             // 连接点始终落在面板朝向圆圈的一侧，最后一段因此保持水平。
             // 起点位于扫描圆周。默认短 45° 斜线与水平线构成约 135° 的小夹角。
@@ -139,9 +145,8 @@ public sealed class RadialPanelLines : MaskableGraphic
 
     private Vector2 WorldToLocal(Vector3 world)
     {
-        Vector2 screen = RectTransformUtility.WorldToScreenPoint(null, world);
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, screen, null, out Vector2 local);
-        return local;
+        Vector3 local = rectTransform.InverseTransformPoint(world);
+        return new Vector2(local.x, local.y);
     }
 
     private Rect GetLocalRect(RectTransform target)

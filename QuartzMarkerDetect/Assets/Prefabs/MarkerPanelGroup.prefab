@@ -87,7 +87,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603668562886003061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
@@ -121,6 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enlargedScale: 2
   transitionDuration: 0.18
+  moveAwayFromCenter: 1
+  centerClearance: 24
 --- !u!1 &1946594467578934291
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +210,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946594467578934291}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
@@ -242,6 +244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enlargedScale: 2
   transitionDuration: 0.18
+  moveAwayFromCenter: 1
+  centerClearance: 24
 --- !u!1 &2135915832396242281
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +511,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3487234964211677409}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
@@ -541,6 +545,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enlargedScale: 2
   transitionDuration: 0.18
+  moveAwayFromCenter: 1
+  centerClearance: 24
 --- !u!1 &3914058920773534564
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,8 +644,8 @@ MonoBehaviour:
   followSpeed: 12
   fadeDuration: 0.2
   panelRevealAt: 0.65
-  autoArrangeLeaves: 1
-  equalizeLeafAngles: 1
+  autoArrangeLeaves: 0
+  equalizeLeafAngles: 0
   minimumLeafAngle: 44
   maxLeafAngleAdjustment: 68
   leafOverlapPadding: 48
