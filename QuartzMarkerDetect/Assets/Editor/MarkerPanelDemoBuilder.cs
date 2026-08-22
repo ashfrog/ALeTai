@@ -15,6 +15,8 @@ public static class MarkerPanelDemoBuilder
     private const string PrefabPath = PrefabFolder + "/MarkerPanelGroup.prefab";
     private const string PanelSpriteSheetPath = "Assets/UI/资源 1.png";
     private static readonly string[] PanelSpriteNames = { "资源 1_0", "资源 1_1", "资源 1_2" };
+    private const float MarkerPrefabScale = 1.35f;
+    private const float PanelHeight = 300f;
     private static readonly Color Cyan = new Color(0.06f, 1f, 0.72f, 1f);
 
     [MenuItem("Tools/Marker Detect/Rebuild Panel Growth Demo")]
@@ -146,6 +148,7 @@ public static class MarkerPanelDemoBuilder
         GameObject root = UIObject("MarkerPanelGroup", null);
         RectTransform rootRect = root.GetComponent<RectTransform>();
         rootRect.sizeDelta = Vector2.zero;
+        rootRect.localScale = Vector3.one * MarkerPrefabScale;
         CanvasGroup rootGroup = root.AddComponent<CanvasGroup>();
         MarKActions eventsSource = root.AddComponent<MarKActions>();
         MarkerPanelPresenter presenter = root.AddComponent<MarkerPanelPresenter>();
@@ -153,7 +156,7 @@ public static class MarkerPanelDemoBuilder
         GameObject linesObject = UIObject("PanelLines", root.transform);
         RectTransform linesRect = linesObject.GetComponent<RectTransform>();
         linesRect.anchorMin = linesRect.anchorMax = new Vector2(0.5f, 0.5f);
-        linesRect.sizeDelta = new Vector2(1160f, 520f);
+        linesRect.sizeDelta = new Vector2(2000f, 1000f);
         RadialPanelLines lines = linesObject.AddComponent<RadialPanelLines>();
         lines.color = Cyan;
         SerializedObject lineSettings = new SerializedObject(lines);
@@ -175,14 +178,14 @@ public static class MarkerPanelDemoBuilder
         white.raycastTarget = red.raycastTarget = green.raycastTarget = false;
 
         // 左一右二的紧凑扇形：卡片靠近圆环，但仍保留较长的水平线段。
-        Vector2[] offsets = { new Vector2(-400f, 66f), new Vector2(390f, 126f), new Vector2(390f, -116f) };
+        Vector2[] offsets = { new Vector2(-600f, 0f), new Vector2(600f, 210f), new Vector2(600f, -210f) };
         string[] names = { "材料特性", "产品应用效果", "航天与国防" };
         RectTransform[] targets = new RectTransform[3];
         CanvasGroup[] panels = new CanvasGroup[3];
         for (int i = 0; i < 3; i++)
         {
-            GameObject panel = CreatePanel($"PanelImage_{i + 1}", root.transform, names[i]);
-            panel.GetComponent<Image>().sprite = LoadPanelSprite(PanelSpriteNames[i]);
+            Sprite sprite = LoadPanelSprite(PanelSpriteNames[i]);
+            GameObject panel = CreatePanel($"PanelImage_{i + 1}", root.transform, names[i], sprite);
             targets[i] = panel.GetComponent<RectTransform>();
             targets[i].anchoredPosition = offsets[i];
             panels[i] = panel.GetComponent<CanvasGroup>();
@@ -204,14 +207,19 @@ public static class MarkerPanelDemoBuilder
         return prefab;
     }
 
-    private static GameObject CreatePanel(string name, Transform parent, string title)
+    private static GameObject CreatePanel(string name, Transform parent, string title, Sprite sprite)
     {
         GameObject panel = UIObject(name, parent);
         RectTransform rt = panel.GetComponent<RectTransform>();
         rt.anchorMin = rt.anchorMax = new Vector2(0.5f, 0.5f);
-        rt.sizeDelta = new Vector2(340f, 126f);
+        float aspect = sprite != null && sprite.rect.height > 0f
+            ? sprite.rect.width / sprite.rect.height
+            : 2f;
+        rt.sizeDelta = new Vector2(PanelHeight * aspect, PanelHeight);
         Image image = panel.AddComponent<Image>();
-        image.color = new Color(0.12f, 0.28f, 0.24f, 0.96f);
+        image.sprite = sprite;
+        image.preserveAspect = true;
+        image.color = Color.white;
         Outline outline = panel.AddComponent<Outline>();
         outline.effectColor = new Color(0.65f, 1f, 0.88f, 0.9f);
         outline.effectDistance = new Vector2(2f, -2f);
