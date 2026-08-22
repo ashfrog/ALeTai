@@ -13,6 +13,8 @@ public static class MarkerPanelDemoBuilder
     private const string ScenePath = "Assets/Scenes/MarkerPanelDemo.unity";
     private const string PrefabFolder = "Assets/Prefabs";
     private const string PrefabPath = PrefabFolder + "/MarkerPanelGroup.prefab";
+    private const string PanelSpriteSheetPath = "Assets/UI/资源 1.png";
+    private static readonly string[] PanelSpriteNames = { "资源 1_0", "资源 1_1", "资源 1_2" };
     private static readonly Color Cyan = new Color(0.06f, 1f, 0.72f, 1f);
 
     [MenuItem("Tools/Marker Detect/Rebuild Panel Growth Demo")]
@@ -180,6 +182,7 @@ public static class MarkerPanelDemoBuilder
         for (int i = 0; i < 3; i++)
         {
             GameObject panel = CreatePanel($"PanelImage_{i + 1}", root.transform, names[i]);
+            panel.GetComponent<Image>().sprite = LoadPanelSprite(PanelSpriteNames[i]);
             targets[i] = panel.GetComponent<RectTransform>();
             targets[i].anchoredPosition = offsets[i];
             panels[i] = panel.GetComponent<CanvasGroup>();
@@ -213,12 +216,26 @@ public static class MarkerPanelDemoBuilder
         outline.effectColor = new Color(0.65f, 1f, 0.88f, 0.9f);
         outline.effectDistance = new Vector2(2f, -2f);
         CanvasGroup group = panel.AddComponent<CanvasGroup>();
+        panel.AddComponent<PanelImageZoomToggle>();
         CreateText("Label", panel.transform, title, 30, new Vector2(24f, -17f), Vector2.zero, Vector2.one,
             new Vector2(0f, 1f), new Vector2(-42f, -32f), TextAnchor.UpperLeft).color = Cyan;
         CreateText("Placeholder", panel.transform, "图片占位区域", 21, new Vector2(24f, -66f), Vector2.zero,
             Vector2.one, new Vector2(0f, 1f), new Vector2(-42f, -80f), TextAnchor.UpperLeft).color = Color.white;
         group.alpha = 0f;
         return panel;
+    }
+
+    private static Sprite LoadPanelSprite(string spriteName)
+    {
+        Object[] assets = AssetDatabase.LoadAllAssetsAtPath(PanelSpriteSheetPath);
+        for (int i = 0; i < assets.Length; i++)
+        {
+            Sprite sprite = assets[i] as Sprite;
+            if (sprite != null && sprite.name == spriteName) return sprite;
+        }
+
+        Debug.LogWarning($"Panel sprite '{spriteName}' was not found in '{PanelSpriteSheetPath}'.");
+        return null;
     }
 
     private static ScanRingGraphic CreateRing(string name, Transform parent, float size, bool solid,

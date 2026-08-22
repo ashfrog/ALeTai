@@ -93,7 +93,12 @@ public sealed class MarkerPanelPresenter : MonoBehaviour
         if (!visible || panelLines == null || panelImages == null) return;
         float alpha = Mathf.InverseLerp(panelRevealAt, 1f, panelLines.GrowProgress);
         for (int i = 0; i < panelImages.Length; i++)
-            if (panelImages[i] != null) panelImages[i].alpha = alpha;
+        {
+            if (panelImages[i] == null) continue;
+            panelImages[i].alpha = alpha;
+            panelImages[i].interactable = alpha > 0.01f;
+            panelImages[i].blocksRaycasts = alpha > 0.01f;
+        }
     }
 
     private void LateUpdate()
@@ -127,10 +132,18 @@ public sealed class MarkerPanelPresenter : MonoBehaviour
     {
         ApplyPose(details, true);
         ResetLeafPositions();
+        ResetPanelZooms();
         visible = true;
+        group.interactable = true;
+        group.blocksRaycasts = true;
         if (panelImages == null) panelImages = Array.Empty<CanvasGroup>();
         for (int i = 0; i < panelImages.Length; i++)
-            if (panelImages[i] != null) panelImages[i].alpha = 0f;
+        {
+            if (panelImages[i] == null) continue;
+            panelImages[i].alpha = 0f;
+            panelImages[i].interactable = false;
+            panelImages[i].blocksRaycasts = false;
+        }
         panelLines?.PlayGrow();
         FadeTo(1f);
     }
@@ -154,6 +167,9 @@ public sealed class MarkerPanelPresenter : MonoBehaviour
     private void Hide()
     {
         visible = false;
+        group.interactable = false;
+        group.blocksRaycasts = false;
+        ResetPanelZooms();
         FadeTo(0f);
     }
 
@@ -206,11 +222,27 @@ public sealed class MarkerPanelPresenter : MonoBehaviour
     {
         visible = state;
         group.alpha = state ? 1f : 0f;
-        group.interactable = false;
-        group.blocksRaycasts = false;
+        group.interactable = state;
+        group.blocksRaycasts = state;
         if (panelImages == null) return;
         for (int i = 0; i < panelImages.Length; i++)
-            if (panelImages[i] != null) panelImages[i].alpha = state ? 1f : 0f;
+        {
+            if (panelImages[i] == null) continue;
+            panelImages[i].alpha = state ? 1f : 0f;
+            panelImages[i].interactable = state;
+            panelImages[i].blocksRaycasts = state;
+        }
+    }
+
+    private void ResetPanelZooms()
+    {
+        if (panelImages == null) return;
+        for (int i = 0; i < panelImages.Length; i++)
+        {
+            if (panelImages[i] == null) continue;
+            PanelImageZoomToggle zoom = panelImages[i].GetComponent<PanelImageZoomToggle>();
+            if (zoom != null) zoom.ResetZoom();
+        }
     }
 
     private void CacheLeafPositions()

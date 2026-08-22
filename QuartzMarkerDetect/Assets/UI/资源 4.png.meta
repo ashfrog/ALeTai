@@ -127,9 +127,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 49
-        width: 692
-        height: 342
+        y: 0
+        width: 962
+        height: 691
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: "\u8D44\u6E90 4_1"
       rect:
         serializedVersion: 2
-        x: 715
-        y: 48
-        width: 692
-        height: 346
+        x: 1039
+        y: 216
+        width: 963
+        height: 475
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: "\u8D44\u6E90 4_2"
       rect:
         serializedVersion: 2
-        x: 1483
-        y: 0
-        width: 505
-        height: 394
+        x: 2026
+        y: 41
+        width: 482
+        height: 650
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,6 +181,27 @@ TextureImporter:
       bones: []
       spriteID: 346c82b562b71c5449e58597a307f7a7
       internalID: -989400129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u8D44\u6E90 4_3"
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 0
+        width: 1469
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041a122b9a730c146b7936f56655aa3b
+      internalID: -885464479
       vertices: []
       indices: 
       edges: []
@@ -199,6 +220,7 @@ TextureImporter:
       "\u8D44\u6E90 4_0": 922923771
       "\u8D44\u6E90 4_1": -542709528
       "\u8D44\u6E90 4_2": -989400129
+      "\u8D44\u6E90 4_3": -885464479
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -127,9 +127,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 55
-        width: 692
-        height: 342
+        y: 0
+        width: 962
+        height: 474
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: "\u8D44\u6E90 7_1"
       rect:
         serializedVersion: 2
-        x: 715
+        x: 1039
         y: 0
-        width: 692
-        height: 400
+        width: 963
+        height: 474
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: "\u8D44\u6E90 7_2"
       rect:
         serializedVersion: 2
-        x: 1483
-        y: 6
-        width: 505
-        height: 394
+        x: 2026
+        y: 0
+        width: 482
+        height: 474
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
