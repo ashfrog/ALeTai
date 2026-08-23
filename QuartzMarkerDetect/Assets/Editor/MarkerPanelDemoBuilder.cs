@@ -13,8 +13,7 @@ public static class MarkerPanelDemoBuilder
     private const string ScenePath = "Assets/Scenes/MarkerPanelDemo.unity";
     private const string PrefabFolder = "Assets/Prefabs";
     private const string PrefabPath = PrefabFolder + "/MarkerPanelGroup.prefab";
-    private const string PanelSpriteSheetPath = "Assets/UI/资源 1.png";
-    private static readonly string[] PanelSpriteNames = { "资源 1_0", "资源 1_1", "资源 1_2" };
+    private const int PanelImageCount = 3;
     private const float MarkerPrefabScale = 1.35f;
     private const float PanelHeight = 300f;
     private static readonly Color Cyan = new Color(0.06f, 1f, 0.72f, 1f);
@@ -83,6 +82,23 @@ public static class MarkerPanelDemoBuilder
 
             MarkerPanelPresenter presenter = instance.GetComponent<MarkerPanelPresenter>();
             presenter.ConfigureCombinedDisplay(displayIndex, CombinedResolution, Display4KResolution.x);
+            AssignPanelSprites(instance, objectID);
+        }
+    }
+
+    private static void AssignPanelSprites(GameObject markerInstance, int resourceID)
+    {
+        for (int i = 0; i < PanelImageCount; i++)
+        {
+            Transform panelTransform = markerInstance.transform.Find($"PanelImage_{i + 1}");
+            Image image = panelTransform != null ? panelTransform.GetComponent<Image>() : null;
+            Sprite sprite = LoadPanelSprite(resourceID, i);
+            if (image == null || sprite == null) continue;
+
+            image.sprite = sprite;
+            image.rectTransform.sizeDelta = GetPanelSize(sprite);
+            PrefabUtility.RecordPrefabInstancePropertyModifications(image);
+            PrefabUtility.RecordPrefabInstancePropertyModifications(image.rectTransform);
         }
     }
 
@@ -184,7 +200,7 @@ public static class MarkerPanelDemoBuilder
         CanvasGroup[] panels = new CanvasGroup[3];
         for (int i = 0; i < 3; i++)
         {
-            Sprite sprite = LoadPanelSprite(PanelSpriteNames[i]);
+            Sprite sprite = LoadPanelSprite(1, i);
             GameObject panel = CreatePanel($"PanelImage_{i + 1}", root.transform, names[i], sprite);
             targets[i] = panel.GetComponent<RectTransform>();
             targets[i].anchoredPosition = offsets[i];
@@ -213,10 +229,7 @@ public static class MarkerPanelDemoBuilder
         GameObject panel = UIObject(name, parent);
         RectTransform rt = panel.GetComponent<RectTransform>();
         rt.anchorMin = rt.anchorMax = new Vector2(0.5f, 0.5f);
-        float aspect = sprite != null && sprite.rect.height > 0f
-            ? sprite.rect.width / sprite.rect.height
-            : 2f;
-        rt.sizeDelta = new Vector2(PanelHeight * aspect, PanelHeight);
+        rt.sizeDelta = GetPanelSize(sprite);
         Image image = panel.AddComponent<Image>();
         image.sprite = sprite;
         image.preserveAspect = true;
@@ -243,16 +256,26 @@ public static class MarkerPanelDemoBuilder
         return panel;
     }
 
-    private static Sprite LoadPanelSprite(string spriteName)
+    private static Vector2 GetPanelSize(Sprite sprite)
     {
-        Object[] assets = AssetDatabase.LoadAllAssetsAtPath(PanelSpriteSheetPath);
+        float aspect = sprite != null && sprite.rect.height > 0f
+            ? sprite.rect.width / sprite.rect.height
+            : 2f;
+        return new Vector2(PanelHeight * aspect, PanelHeight);
+    }
+
+    private static Sprite LoadPanelSprite(int resourceID, int panelIndex)
+    {
+        string spriteSheetPath = $"Assets/UI/资源 {resourceID}.png";
+        string spriteName = $"资源 {resourceID}_{panelIndex}";
+        Object[] assets = AssetDatabase.LoadAllAssetsAtPath(spriteSheetPath);
         for (int i = 0; i < assets.Length; i++)
         {
             Sprite sprite = assets[i] as Sprite;
             if (sprite != null && sprite.name == spriteName) return sprite;
         }
 
-        Debug.LogWarning($"Panel sprite '{spriteName}' was not found in '{PanelSpriteSheetPath}'.");
+        Debug.LogWarning($"Panel sprite '{spriteName}' was not found in '{spriteSheetPath}'.");
         return null;
     }
 
